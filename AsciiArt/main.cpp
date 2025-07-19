@@ -7,9 +7,10 @@
 #include <algorithm>
 #include <exception>
 
+
 std::string CHARS = "@%#+?*;=-:.` ";
 int CHARS_LENGTH = CHARS.length();
-int INTERVAL = 256 / CHARS_LENGTH;
+int INTERVAL = 256 / CHARS_LENGTH; //change interval for higher contrast, keep lowest at 256
 
 char getChar(int gray)
 {
@@ -29,7 +30,8 @@ int main()
     {
         std::cout << "Working dir: " << std::filesystem::current_path().string() << "\n";
 
-        Image test("Pictures/pepe.jpg");
+        Image test("Pictures/BMW_TEST.jpg");
+
 
         std::cout << "Original size: " << test.width << "x" << test.height << "\n";
 

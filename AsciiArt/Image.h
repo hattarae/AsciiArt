@@ -2,15 +2,14 @@
 #include <iostream>
 #pragma warning(disable: 4996) //disable deprication warning
 
-//TODO: change from struct to class
-
 enum ImageType
 {
 	PNG, JPG, BMP, TGA,
 };
 
-struct Image
+class Image
 {
+public:
 	uint8_t* data = NULL;
 	size_t size = 0;
 	int width;
@@ -33,4 +32,7 @@ struct Image
 	Image& resize(float widthScale, float heightScale);
 
 	void freeImage();
+
+	int getWidth();
+	int getHeight(); 
 };

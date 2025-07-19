@@ -210,3 +210,13 @@ void Image::freeImage()
 		data = nullptr;
 	}
 }
+
+int Image::getWidth()
+{
+	return width;
+}
+
+int Image::getHeight()
+{
+	return height;
+}
